@@ -1,25 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome to My Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бытовые услуги в Худжанде - 5Shanbe Master</title>
+  <meta name="description" content="Усто Мастер Сервис - сайт бытовых услуг в Худжанде. Выберите нужного мастера: сантехник, электрик, ремонт техники, установка кондиционеров, сборка мебели и другие услуги с выездом по городу.">
+  <meta name="keywords" content="бытовые услуги Худжанд, мастер на дом Худжанд, сантехник, электрик, ремонт техники, 5Shanbe Master">
+  <link rel="canonical" href="https://khujand-tj.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Усто Мастер Сервис - бытовые услуги в Худжанде">
+  <meta property="og:description" content="Сайт Усто Мастер Сервис - сервиса бытовых услуг в Худжанде.">
+  <meta property="og:url" content="https://khujand-tj.github.io/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-      background-color: #f4f4f4;
+    html {
+      scroll-behavior: smooth;
     }
-    h1 {
-      color: #333;
+
+    .hero-image {
+      animation: heroZoom 26s ease-in-out infinite alternate;
     }
-    p {
-      color: #555;
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-link:hover .service-arrow {
+      transform: translateX(6px);
+    }
+
+    .service-arrow {
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes heroZoom {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.07);
+      }
     }
   </style>
 </head>
-<body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p>This is my main site at <strong>https://username.github.io/</strong></p>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/60 backdrop-blur transition-colors duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#top" class="text-lg font-semibold tracking-wide text-cyan-300">5Shanbe Master</a>
+      <nav class="hidden gap-6 text-sm text-slate-200 md:flex">
+        <a href="#services" class="transition hover:text-cyan-300">Услуги</a>
+        <a href="#about" class="transition hover:text-cyan-300">О сервисе</a>
+        <a href="#districts" class="transition hover:text-cyan-300">Районы выезда</a>
+      </nav>
+      <a href="#services" class="rounded-md bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300">Выбрать услугу</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="relative min-h-screen overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1920&q=80" alt="Бытовой мастер выполняет работы в квартире" class="hero-image absolute inset-0 h-full w-full object-cover">
+      <div class="absolute inset-0 bg-slate-950/65"></div>
+      <div class="relative mx-auto flex min-h-screen max-w-7xl items-center px-4 pt-24 pb-16 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="reveal text-sm uppercase tracking-[0.24em] text-cyan-300">Сайт бытовых услуг в Худжанде</p>
+          <h1 class="reveal mt-4 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">Усто Мастер Сервис Худжанд</h1>
+          <p class="reveal mt-4 max-w-2xl text-lg text-slate-200">Одна главная страница для выбора мастера на дом. Переходите на внутренние страницы услуг и оставляйте заявку в нужном направлении.</p>
+          <div class="reveal mt-8 flex flex-wrap gap-4">
+            <a href="#services" class="rounded-md bg-cyan-400 px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-cyan-300">Смотреть все услуги</a>
+            <a href="/usto-santehnik/" class="rounded-md border border-white/40 px-6 py-3 text-base font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-300">Сантехник в Худжанде</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <h2 class="reveal text-3xl font-bold text-white sm:text-4xl">Внутренние страницы услуг</h2>
+      <p class="reveal mt-3 max-w-3xl text-slate-300">Выберите направление и перейдите на отдельную страницу с подробным описанием, ценами и формой вызова мастера.</p>
+
+      <div class="mt-10 divide-y divide-white/15 border-y border-white/15">
+        <a href="/usto-santehnik/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Сантехник в Худжанде</h3>
+            <p class="mt-1 text-slate-300">Монтаж, ремонт, отопление, канализация, аварийный выезд.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/elektrik/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Электрик</h3>
+            <p class="mt-1 text-slate-300">Проводка, автоматы, розетки, освещение, устранение замыканий.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/master-na-chas/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Мастер на час</h3>
+            <p class="mt-1 text-slate-300">Мелкий бытовой ремонт, крепеж, замена фурнитуры, монтаж полок.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/ustanovka-konditsionera/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Установка кондиционеров</h3>
+            <p class="mt-1 text-slate-300">Монтаж сплит-систем, обслуживание, дозаправка фреоном.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/remont-stiralnyh-mashin/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Ремонт стиральных машин</h3>
+            <p class="mt-1 text-slate-300">Диагностика, замена насосов, ТЭНов, подшипников, ремонт электроники.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/remont-holodilnikov/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Ремонт холодильников</h3>
+            <p class="mt-1 text-slate-300">Компрессоры, утечки, терморегуляторы, восстановление охлаждения.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/remont-posudomoechnyh-mashin/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Ремонт посудомоечных машин</h3>
+            <p class="mt-1 text-slate-300">Устранение ошибок, проблемы с набором и сливом воды, насосы.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/sborka-mebeli/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Сборка мебели</h3>
+            <p class="mt-1 text-slate-300">Сборка шкафов, кухонь, гарнитуров, офисной мебели и крепление к стенам.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/otdelochnye-raboty/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Отделочные работы</h3>
+            <p class="mt-1 text-slate-300">Шпаклевка, покраска, укладка покрытий, локальный ремонт помещений.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/chistka-konditsionera/" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Чистка и сервис кондиционеров</h3>
+            <p class="mt-1 text-slate-300">Профилактика, антибактериальная обработка, проверка дренажа.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/uslugi/ustanovka-bojlera" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Установка бойлера</h3>
+            <p class="mt-1 text-slate-300">Подбор места, надежный монтаж, подключение и проверка безопасности.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+
+        <a href="/uslugi/ustranenie-zasorov" class="service-link reveal flex items-center justify-between gap-6 py-5 transition hover:bg-white/5">
+          <div>
+            <h3 class="text-xl font-semibold text-cyan-300">Устранение засоров</h3>
+            <p class="mt-1 text-slate-300">Прочистка раковин, ванн, унитазов, канализационных линий.</p>
+          </div>
+          <span class="service-arrow text-2xl text-cyan-300">-></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="border-y border-white/15 bg-slate-900/70">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <h2 class="reveal text-3xl font-bold text-white sm:text-4xl">Почему удобно через Усто Мастер Сервис</h2>
+        <p class="reveal mt-4 max-w-3xl text-slate-300">Вы заходите на одну главную страницу, выбираете нужную услугу и переходите на страницу услуги с деталями. Это ускоряет выбор мастера и снижает время до заявки.</p>
+        <div class="reveal mt-8">
+          <a href="/usto-santehnik/" class="inline-flex rounded-md bg-cyan-400 px-6 py-3 text-base font-semibold text-slate-950 transition hover:bg-cyan-300">Услуги сантехника</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="districts" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <h2 class="reveal text-3xl font-bold text-white sm:text-4xl">Выезд по Худжанду</h2>
+      <p class="reveal mt-4 max-w-4xl text-slate-300">Работаем по городу и микрорайонам: центр (универмаг), Гулбахор, Шелкомбинат, Панчшанбе, Гулистон, 8, 9, 10, 11, 12, 13, 15, 18, 19, 20, 31, 32, 33, 34 микрорайоны.</p>
+      <p class="reveal mt-5 text-slate-300">Для сантехнических работ используйте готовый лонглендинг: <a href="https://master.5shanbe.tj/uslugi/santekhnik" class="font-semibold text-cyan-300 hover:text-cyan-200">Вызвать сантехника в Худжанде</a>.</p>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/15 bg-slate-950">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-slate-400 sm:px-6 lg:px-8">
+      <p>Усто Мастер Сервис - бытовые услуги в Худжанде.</p>
+      <p>Внутренние страницы услуг доступны из каталога на главной.</p>
+      <p>© <span id="year"></span> 5Shanbe Master</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
+
+    const header = document.getElementById("site-header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        header.classList.add("bg-slate-950/90");
+      } else {
+        header.classList.remove("bg-slate-950/90");
+      }
+    });
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Усто Мастер Сервис Худжанд",
+      "url": "https://khujand-tj.github.io/",
+      "areaServed": "Худжанд",
+      "description": "Сервис бытовых услуг в Худжанде.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Каталог услуг",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Сантехник", "url": "https://khujand-tj.github.io/usto-santehnik/"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Электрик", "url": "https://khujand-tj.github.io/elektrik"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Мастер на час", "url": "https://khujand-tj.github.io/master-na-chas"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Установка кондиционеров", "url": "https://khujand-tj.github.io/ustanovka-konditsionera"}}
+        ]
+      }
+    }
+  </script>
 </body>
 </html>
